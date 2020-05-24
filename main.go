@@ -1,9 +1,11 @@
 package main
 
 import (
-	"log"
+	log "github.com/jeanphorn/log4go"
 )
 
 func main() {
-	log.Printf("OpenTeach starting")
+	log.LoadConfiguration("logging.json")
+	log.Info("OpenTeach starting")
+	log.Close()
 }

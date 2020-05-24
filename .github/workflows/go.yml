@@ -29,11 +29,8 @@ jobs:
     - name: Test
       run: go test -v .
     
-    - name: GolangCI-Linter
-      uses: Mushus/golangci-linter@v1.1.2
-      if: ${{ matrix.os }} == 'ubuntu-latest'
-      with:
-        basePath: .
+    - name: golangci-lint
+      uses: actions-contrib/golangci-lint@v1
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2

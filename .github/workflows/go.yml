@@ -28,9 +28,6 @@ jobs:
 
     - name: Test
       run: go test -v .
-    
-    - name: golangci-lint
-      uses: actions-contrib/golangci-lint@v1
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
